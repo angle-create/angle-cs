@@ -34,9 +34,9 @@ export const AboutSection = () => {
                 className="text-black/80 text-lg"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
               >
-                テクノロジーとデザインの力で、人々の生活をより豊かにする。
-                私たちは、最新技術を活用しながら、ユーザー体験を最重視した
-                ソリューションを提供します。
+                私たちはテクノロジーを多角的な視点で捉え、
+                最新技術を駆使しながら、
+                常にユーザー体験を最優先に考えたソリューションを提供します。
               </p>
             </div>
 
@@ -51,9 +51,8 @@ export const AboutSection = () => {
                 className="text-black/80 text-lg"
                 style={{ fontFamily: "Montserrat, sans-serif" }}
               >
-                2030年までに、テクノロジーとデザインの融合により、
-                100万人の生活にポジティブな影響を与える。
-                持続可能な社会の実現に貢献します。
+                多角的な発想と先進技術で、 変化の時代に対応しながら
+                ユーザーに寄り添うサービスを築いていきます。
               </p>
             </div>
           </div>
