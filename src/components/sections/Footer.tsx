@@ -5,12 +5,12 @@ export const Footer = () => (
     className="w-full bg-white border-t border-gray-200 py-8 text-center"
     style={{ fontFamily: "Montserrat, sans-serif" }}
     aria-label="サイトのフッター"
-    data-oid="o12rpth"
+    data-oid="dmwmpuk"
   >
-    <div data-oid="jie3_aq">
+    <div data-oid="1bss0d1">
       <span
         style={{ fontWeight: 700, fontSize: "1.1rem", color: "#111" }}
-        data-oid=".5._:w."
+        data-oid="deg_u3_"
       >
         © {new Date().getFullYear()} angle inc.
       </span>

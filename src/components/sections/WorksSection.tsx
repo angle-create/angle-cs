@@ -30,26 +30,26 @@ export const WorksSection = () => {
     <section
       id="works"
       className="relative h-screen flex items-center justify-center bg-white"
-      data-oid="5hvf6qa"
+      data-oid="u:6-2zq"
     >
-      <div className="container mx-auto px-4" data-oid="jv:12hk">
+      <div className="container mx-auto px-4" data-oid="zcbvzop">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
           className="max-w-6xl mx-auto"
-          data-oid="y5z295u"
+          data-oid="i7k:gz4"
         >
           <h2
             className="text-4xl md:text-5xl font-bold text-black mb-16 text-center"
             style={{ fontFamily: "Montserrat, sans-serif" }}
-            data-oid="f:7ms-j"
+            data-oid="t:dt.-e"
           >
             Works
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8" data-oid="-2izjv3">
+          <div className="grid md:grid-cols-3 gap-8" data-oid="b99f43g">
             {works.map((work, index) => (
               <motion.div
                 key={index}
@@ -58,33 +58,33 @@ export const WorksSection = () => {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className="bg-white rounded-2xl overflow-hidden shadow border border-gray-100"
-                data-oid="opujn1q"
+                data-oid="t_:1w4q"
               >
-                <div className="aspect-video bg-white/10" data-oid="14z7c5z">
+                <div className="aspect-video bg-white/10" data-oid="z.095lu">
                   {/* 画像は後で追加 */}
                 </div>
-                <div className="p-6" data-oid="gzqrs5a">
+                <div className="p-6" data-oid="blo:xgw">
                   <h3
                     className="text-xl font-bold text-green-600 mb-2"
                     style={{ fontFamily: "Montserrat, sans-serif" }}
-                    data-oid=".ju7vgq"
+                    data-oid="pr-ptbg"
                   >
                     {work.title}
                   </h3>
                   <p
                     className="text-black/80 text-sm mb-4"
                     style={{ fontFamily: "Montserrat, sans-serif" }}
-                    data-oid="5c2xvpj"
+                    data-oid="mybps9y"
                   >
                     {work.description}
                   </p>
-                  <div className="flex flex-wrap gap-2" data-oid="9n70rjl">
+                  <div className="flex flex-wrap gap-2" data-oid="iipzfaj">
                     {work.tags.map((tag, tagIndex) => (
                       <span
                         key={tagIndex}
                         className="px-3 py-1 bg-green-600/10 text-green-600 rounded-full text-sm"
                         style={{ fontFamily: "Montserrat, sans-serif" }}
-                        data-oid="t_7ouuq"
+                        data-oid="yigw5dy"
                       >
                         {tag}
                       </span>
@@ -101,13 +101,13 @@ export const WorksSection = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             viewport={{ once: true }}
             className="mt-16 text-center"
-            data-oid="3_k-rka"
+            data-oid=":vyh0qj"
           >
             <a
               href="#contact"
               className="inline-block bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600/90 transition-colors"
               style={{ fontFamily: "Montserrat, sans-serif" }}
-              data-oid="2qxrpd4"
+              data-oid="o1l4zck"
             >
               プロジェクトについて詳しく
             </a>

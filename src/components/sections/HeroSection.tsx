@@ -21,7 +21,7 @@ export default function HeroSection() {
           <span className="text-green-600" data-oid="22v0c.3">
             ×
           </span>{" "}
-          Design
+          Angle
         </h1>
       </div>
     </section>

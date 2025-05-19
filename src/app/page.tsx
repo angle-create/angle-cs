@@ -8,14 +8,14 @@ import { Header } from "@/components/Header";
 export default function Home() {
   return (
     <>
-      <Header data-oid="yloj3aj" />
-      <main data-oid="ai7kiu0">
-        <HeroSection data-oid="ghju8w8" />
-        <AboutSection data-oid="g5hxkuk" />
-        <WorksSection data-oid="96.3bsm" />
-        <ContactSection data-oid="93_z8vr" />
+      <Header data-oid="-7sj24z" />
+      <main data-oid="femq4f7">
+        <HeroSection data-oid="r2ulhst" />
+        <AboutSection data-oid="_1zo5er" />
+        <WorksSection data-oid="6.gk8vn" />
+        <ContactSection data-oid="yz9hlsk" />
       </main>
-      <Footer data-oid="55ajxfo" />
+      <Footer data-oid="uqgo4a6" />
     </>
   );
 }
