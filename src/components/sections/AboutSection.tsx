@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import { Eye, Brain, Hammer } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -62,37 +63,105 @@ export const AboutSection = () => {
               className="text-2xl font-bold text-green-600 mb-8 text-center"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
-              数字で見る angle
+              Our Principles
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { number: "50+", label: "プロジェクト数" },
-                { number: "30+", label: "企業パートナー" },
-                { number: "100%", label: "顧客満足度" },
-                { number: "24/7", label: "サポート体制" },
-              ].map((stat, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="text-center"
+            <p
+              className="text-black/80 text-lg text-center mb-8"
+              style={{ fontFamily: "Montserrat, sans-serif" }}
+            >
+              一人ひとりに寄り添う、私たちの3つの姿勢
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-8 mb-16">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+                className="border border-green-100 hover:border-green-300 p-8 rounded-lg shadow-sm hover:shadow transition-all duration-300"
+              >
+                <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-full bg-green-50 text-green-600">
+                  <Eye size={24} strokeWidth={2} />
+                </div>
+                <h4
+                  className="text-xl font-bold mb-3 text-black"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
                 >
-                  <div
-                    className="text-4xl font-bold text-black mb-2"
-                    style={{ fontFamily: "Montserrat, sans-serif" }}
-                  >
-                    {stat.number}
-                  </div>
-                  <div
-                    className="text-black/60"
-                    style={{ fontFamily: "Montserrat, sans-serif" }}
-                  >
-                    {stat.label}
-                  </div>
-                </motion.div>
-              ))}
+                  Your Perspective First
+                </h4>
+                <p
+                  className="text-sm text-black/60 mb-2"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                >
+                  相手の視点から
+                </p>
+                <p
+                  className="text-black/80"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                >
+                  課題の本質を見極めるために、まずは「あなたの視点」で考えます。
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="border border-green-100 hover:border-green-300 p-8 rounded-lg shadow-sm hover:shadow transition-all duration-300"
+              >
+                <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-full bg-green-50 text-green-600">
+                  <Brain size={24} strokeWidth={2} />
+                </div>
+                <h4
+                  className="text-xl font-bold mb-3 text-black"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                >
+                  Flexible Thinking
+                </h4>
+                <p
+                  className="text-sm text-black/60 mb-2"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                >
+                  柔軟な発想
+                </p>
+                <p
+                  className="text-black/80"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                >
+                  テンプレートではなく、状況に合わせた「最適解」を提案します。
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                viewport={{ once: true }}
+                className="border border-green-100 hover:border-green-300 p-8 rounded-lg shadow-sm hover:shadow transition-all duration-300"
+              >
+                <div className="flex items-center justify-center w-12 h-12 mb-6 rounded-full bg-green-50 text-green-600">
+                  <Hammer size={24} strokeWidth={2} />
+                </div>
+                <h4
+                  className="text-xl font-bold mb-3 text-black"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                >
+                  Crafted With Care
+                </h4>
+                <p
+                  className="text-sm text-black/60 mb-2"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                >
+                  ていねいな仕事
+                </p>
+                <p
+                  className="text-black/80"
+                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                >
+                  小さなこだわりの積み重ねが、大きな信頼につながると信じています。
+                </p>
+              </motion.div>
             </div>
           </div>
         </motion.div>
