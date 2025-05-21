@@ -22,7 +22,7 @@ export const ContactSection = () => {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = async (data: FormData) => {
+  const onSubmit = async () => {
     // ここでAPI送信などを実装
     await new Promise((r) => setTimeout(r, 1000));
     reset();
