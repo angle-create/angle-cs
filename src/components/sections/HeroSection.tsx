@@ -81,7 +81,7 @@ export default function HeroSection() {
             transition={{ delay: 1.2, duration: 0.8 }}
             className="text-xl text-gray-700 max-w-2xl mx-auto"
           >
-            多角的な視点でテクノロジーを捉え、革新的なソリューションを提供します
+            多角的な視点でテクノロジーを捉え革新的なソリューションを提供します
           </motion.p>
         </motion.div>
       </div>

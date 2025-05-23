@@ -11,7 +11,7 @@ export const Header = () => (
   <header className="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur border-b border-black/10">
     <nav className="max-w-6xl mx-auto flex items-center justify-between px-4 py-3">
       <span className="font-bold text-xl tracking-tight text-black">
-        <img src="/logo.png" alt="angle logo" className="h-10" />
+        <img src="/logo.png" alt="angle logo" className="h-13" />
         {/* angle */}
       </span>
       <ul className="flex gap-6">
