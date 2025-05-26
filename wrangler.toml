@@ -1,0 +1,21 @@
+name = "angle-cs"
+compatibility_date = "2024-01-01"
+
+# Next.js Edge Runtime設定
+[build]
+command = "bun run build"
+
+[env.production]
+# 本番環境の設定
+vars = { NODE_ENV = "production" }
+
+[env.preview]
+# プレビュー環境の設定
+vars = { NODE_ENV = "development" }
+
+# 環境変数の例（実際の値はCloudflare Pagesの管理画面で設定）
+# [env.production.vars]
+# TO_EMAIL = "your-email@example.com"
+# RESEND_API_KEY = "re_xxxxxxxxxxxxxxxxxxxxxxxxxx"
+# FROM_EMAIL = "noreply@yourdomain.com"
+# DOMAIN = "yourdomain.com" 
