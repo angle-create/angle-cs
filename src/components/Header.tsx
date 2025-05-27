@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 const menu = [
   { label: "Home", href: "#" },
@@ -47,13 +49,15 @@ export const Header = () => {
             transition={{ duration: 0.5 }}
             className="flex-shrink-0"
           >
-            <a href="/" className="block md:ml-8 lg:ml-12">
-              <img
+            <Link href="/" className="block md:ml-8 lg:ml-12">
+              <Image
                 src="/logo.png"
                 alt="angle logo"
+                width={48}
+                height={48}
                 className="h-8 sm:h-10 md:h-12 w-auto object-contain"
               />
-            </a>
+            </Link>
           </motion.div>
 
           {/* 中央のスペーサー（デスクトップ用） */}
@@ -73,14 +77,14 @@ export const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
               >
-                <a
+                <Link
                   href={item.href}
                   className="relative text-black font-medium hover:text-green-600 transition-all duration-300 px-3 lg:px-4 py-2 rounded-lg hover:bg-green-50 group"
                   style={{ fontFamily: "Montserrat, sans-serif" }}
                 >
                   {item.label}
                   <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-full group-hover:left-0" />
-                </a>
+                </Link>
               </motion.li>
             ))}
           </motion.ul>
@@ -181,7 +185,7 @@ export const Header = () => {
                           delay: 0.1 + index * 0.1,
                         }}
                       >
-                        <a
+                        <Link
                           href={item.href}
                           onClick={closeMenu}
                           className="flex items-center px-4 py-3 text-lg font-medium text-black hover:text-green-600 hover:bg-green-50 rounded-lg transition-all duration-200 group"
@@ -191,7 +195,7 @@ export const Header = () => {
                             {item.label}
                             <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-green-600 transition-all duration-300 group-hover:w-full" />
                           </span>
-                        </a>
+                        </Link>
                       </motion.li>
                     ))}
                   </ul>
