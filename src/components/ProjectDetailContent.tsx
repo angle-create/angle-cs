@@ -266,18 +266,12 @@ export default function ProjectDetailContent({
           transition={{ duration: 0.8, delay: 0.7 }}
           className="text-center"
         >
-          <h3
-            className="text-2xl font-bold text-black mb-8"
-            style={{ fontFamily: "Montserrat, sans-serif" }}
-          >
-            他のプロジェクトも見る
-          </h3>
           <Link
-            href="/#works"
+            href="/projects"
             className="inline-block bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600/90 transition-colors"
             style={{ fontFamily: "Montserrat, sans-serif" }}
           >
-            Works一覧に戻る
+            他のプロジェクトも見る
           </Link>
         </motion.div>
       </div>
