@@ -83,9 +83,16 @@ export default function HeroSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2, duration: 0.8 }}
-            className="text-base sm:text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mt-6 sm:mt-8 px-4"
+            className="text-base sm:text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mt-6 sm:mt-8 px-4"
           >
-            多角的な視点でテクノロジーを捉え革新的なソリューションを提供します
+            <span className="hidden sm:inline">
+              多角的な視点でテクノロジーを捉え革新的なソリューションを提供します
+            </span>
+            <span className="sm:hidden">
+              多角的な視点でテクノロジーを捉え
+              <br />
+              革新的なソリューションを提供します
+            </span>
           </motion.p>
         </motion.div>
       </div>

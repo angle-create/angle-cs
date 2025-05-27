@@ -56,6 +56,7 @@ export const Header = () => {
                 width={48}
                 height={48}
                 className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+                priority={true}
               />
             </Link>
           </motion.div>
