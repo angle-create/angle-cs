@@ -1,43 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-
-const works = [
-  {
-    title: "NFT Marketplace",
-    description:
-      "アーティスト向けNFTマーケットプレイスの開発。ブロックチェーン技術を活用し、アート作品の取引を安全かつ効率的に実現。",
-    image: "/works/nft-marketplace.jpg",
-    tags: ["Web3", "NFT", "Blockchain"],
-  },
-  {
-    title: "AI Chatbot",
-    description:
-      "自然言語処理を活用したカスタマーサポートチャットボット。24時間365日のサポートを実現し、顧客満足度を向上。",
-    image: "/works/ai-chatbot.jpg",
-    tags: ["AI", "NLP", "Customer Support"],
-  },
-  {
-    title: "VR Training",
-    description:
-      "製造業向けVRトレーニングシステム。安全で効率的な作業訓練を実現し、教育コストを削減。",
-    image: "/works/vr-training.jpg",
-    tags: ["XR", "VR", "Training"],
-  },
-  {
-    title: "IoT Dashboard",
-    description:
-      "工場設備のリアルタイム監視システム。IoTセンサーからのデータを可視化し、予防保全を実現。",
-    image: "/works/iot-dashboard.jpg",
-    tags: ["IoT", "Dashboard", "Analytics"],
-  },
-  {
-    title: "Mobile App",
-    description:
-      "健康管理アプリケーション。日々の活動データを記録・分析し、ユーザーの健康促進をサポート。",
-    image: "/works/mobile-app.jpg",
-    tags: ["Mobile", "Health", "Analytics"],
-  },
-];
+import Link from "next/link";
+import { projects } from "@/data/projects";
 
 export const WorksSection = () => {
   return (
@@ -62,9 +26,9 @@ export const WorksSection = () => {
 
           {/* デスクトップ：グリッド表示 */}
           <div className="hidden md:grid md:grid-cols-3 gap-8 mb-16">
-            {works.slice(0, 3).map((work, index) => (
+            {projects.slice(0, 3).map((project, index) => (
               <motion.div
-                key={work.title}
+                key={project.id}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -73,7 +37,7 @@ export const WorksSection = () => {
               >
                 <div className="aspect-video bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
                   <div className="text-green-600 font-bold text-lg">
-                    {work.title}
+                    {project.title}
                   </div>
                 </div>
                 <div className="p-6">
@@ -81,18 +45,18 @@ export const WorksSection = () => {
                     className="text-xl font-bold text-green-600 mb-2"
                     style={{ fontFamily: "Montserrat, sans-serif" }}
                   >
-                    {work.title}
+                    {project.title}
                   </h3>
                   <p
                     className="text-black/80 text-sm mb-4"
                     style={{ fontFamily: "Montserrat, sans-serif" }}
                   >
-                    {work.description}
+                    {project.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
-                    {work.tags.map((tag, tagIndex) => (
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag, tagIndex) => (
                       <span
-                        key={`${work.title}-${tag}`}
+                        key={`${project.id}-${tag}-${tagIndex}`}
                         className="px-3 py-1 bg-green-600/10 text-green-600 rounded-full text-sm"
                         style={{ fontFamily: "Montserrat, sans-serif" }}
                       >
@@ -100,6 +64,13 @@ export const WorksSection = () => {
                       </span>
                     ))}
                   </div>
+                  <Link
+                    href={`/projects/${project.id}`}
+                    className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-600/90 transition-colors"
+                    style={{ fontFamily: "Montserrat, sans-serif" }}
+                  >
+                    詳細を見る
+                  </Link>
                 </div>
               </motion.div>
             ))}
@@ -108,9 +79,9 @@ export const WorksSection = () => {
           {/* モバイル・タブレット：横スクロール */}
           <div className="md:hidden mb-16">
             <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
-              {works.map((work, index) => (
+              {projects.map((project, index) => (
                 <motion.div
-                  key={work.title}
+                  key={project.id}
                   initial={{ opacity: 0, x: 50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
@@ -119,7 +90,7 @@ export const WorksSection = () => {
                 >
                   <div className="aspect-video bg-gradient-to-br from-green-50 to-green-100 flex items-center justify-center">
                     <div className="text-green-600 font-bold text-lg">
-                      {work.title}
+                      {project.title}
                     </div>
                   </div>
                   <div className="p-6">
@@ -127,18 +98,18 @@ export const WorksSection = () => {
                       className="text-xl font-bold text-green-600 mb-2"
                       style={{ fontFamily: "Montserrat, sans-serif" }}
                     >
-                      {work.title}
+                      {project.title}
                     </h3>
                     <p
                       className="text-black/80 text-sm mb-4"
                       style={{ fontFamily: "Montserrat, sans-serif" }}
                     >
-                      {work.description}
+                      {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2">
-                                             {work.tags.map((tag, tagIndex) => (
-                         <span
-                           key={`${work.title}-mobile-${tag}`}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.map((tag, tagIndex) => (
+                        <span
+                          key={`${project.id}-mobile-${tag}-${tagIndex}`}
                           className="px-3 py-1 bg-green-600/10 text-green-600 rounded-full text-sm"
                           style={{ fontFamily: "Montserrat, sans-serif" }}
                         >
@@ -146,6 +117,13 @@ export const WorksSection = () => {
                         </span>
                       ))}
                     </div>
+                    <Link
+                      href={`/projects/${project.id}`}
+                      className="inline-block bg-green-600 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-green-600/90 transition-colors"
+                      style={{ fontFamily: "Montserrat, sans-serif" }}
+                    >
+                      詳細を見る
+                    </Link>
                   </div>
                 </motion.div>
               ))}
@@ -159,13 +137,13 @@ export const WorksSection = () => {
             viewport={{ once: true }}
             className="text-center"
           >
-            <a
-              href="#contact"
+            <Link
+              href="/projects"
               className="inline-block bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-green-600/90 transition-colors"
               style={{ fontFamily: "Montserrat, sans-serif" }}
             >
               プロジェクトについて詳しく
-            </a>
+            </Link>
           </motion.div>
         </motion.div>
       </div>
