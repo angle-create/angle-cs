@@ -5,13 +5,14 @@ import { Footer } from "@/components/sections/Footer";
 import ProjectDetailContent from "@/components/ProjectDetailContent";
 
 interface ProjectPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = projects.find((p) => p.id === params.id);
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { id } = await params;
+  const project = projects.find((p) => p.id === id);
 
   if (!project) {
     notFound();
