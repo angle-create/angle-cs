@@ -6,10 +6,10 @@ import Link from "next/link";
 import Image from "next/image";
 
 const menu = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#about" },
-  { label: "Works", href: "/projects" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/#about" },
+  { label: "Projects", href: "/projects" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const Header = () => {
