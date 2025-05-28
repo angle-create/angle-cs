@@ -1,7 +1,5 @@
 import { notFound } from "next/navigation";
 import { projects } from "@/data/projects";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/sections/Footer";
 import ProjectDetailContent from "@/components/ProjectDetailContent";
 
 interface ProjectPageProps {
@@ -19,13 +17,9 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <>
-      <Header />
-      <main className="pt-20" style={{ backgroundColor: "white" }}>
-        <ProjectDetailContent project={project} />
-      </main>
-      <Footer />
-    </>
+    <div className="pt-20" style={{ backgroundColor: "white" }}>
+      <ProjectDetailContent project={project} />
+    </div>
   );
 }
 
