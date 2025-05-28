@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Calendar, Clock, ArrowRight, Search, Tag } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
 
 const NewsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
