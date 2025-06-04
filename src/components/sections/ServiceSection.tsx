@@ -1,120 +1,186 @@
 "use client";
 import { motion } from "framer-motion";
-import { Globe, Smartphone, Database, ArrowRight } from "lucide-react";
+import {
+  Globe,
+  Smartphone,
+  Database,
+  ArrowRight,
+  Lightbulb,
+  Code,
+  Rocket,
+} from "lucide-react";
 import Link from "next/link";
 
 export const ServiceSection = () => {
-  const services = [
+  const collaborations = [
     {
-      icon: <Globe className="w-8 h-8" />,
-      title: "ウェブ開発",
+      icon: <Lightbulb className="w-10 h-10" />,
+      title: "アイデア × デザイン",
       description:
-        "レスポンシブで高性能なウェブサイトとウェブアプリケーションの開発",
-      features: ["React/Next.js", "TypeScript", "SEO最適化"],
+        "あなたの想いを形にする。ユーザー体験を重視したデザインで、アイデアを魅力的な形に変換します。",
+      features: ["UX/UIデザイン", "プロトタイピング", "ユーザーテスト"],
       color: "from-blue-500 to-blue-600",
+      shadowColor: "rgba(59, 130, 246, 0.3)",
     },
     {
-      icon: <Smartphone className="w-8 h-8" />,
-      title: "モバイルアプリ開発",
+      icon: <Code className="w-10 h-10" />,
+      title: "構想 × 開発",
       description:
-        "iOS・Android対応のネイティブ・クロスプラットフォームアプリ開発",
-      features: ["React Native", "Flutter", "Swift"],
+        "技術的な実現可能性とビジネス価値を両立。最新技術で確実に動くシステムを構築します。",
+      features: ["フルスタック開発", "API設計", "パフォーマンス最適化"],
       color: "from-green-500 to-green-600",
+      shadowColor: "rgba(34, 197, 94, 0.3)",
     },
     {
-      icon: <Database className="w-8 h-8" />,
-      title: "バックエンド開発",
-      description: "スケーラブルで安全なサーバーサイドシステムの構築",
-      features: ["API設計", "クラウド構築", "データベース設計"],
+      icon: <Rocket className="w-10 h-10" />,
+      title: "挑戦 × 成長",
+      description:
+        "継続的な改善とスケーリング。一緒に成長し続けるパートナーシップを築きます。",
+      features: ["運用サポート", "機能拡張", "成果分析"],
       color: "from-purple-500 to-purple-600",
+      shadowColor: "rgba(147, 51, 234, 0.3)",
     },
   ];
 
   return (
-    <section id="service" className="py-20 bg-gray-50">
+    <section id="service" className="py-24 bg-white">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
-          className="max-w-6xl mx-auto"
+          className="max-w-7xl mx-auto"
         >
-          <div className="text-center mb-16">
-            <h2
-              className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
+          <div className="text-center mb-20">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="text-4xl sm:text-5xl md:text-6xl font-black text-gray-800 mb-6 tracking-tight"
+              style={{
+                fontFamily: "system-ui, -apple-system, sans-serif",
+                textShadow: "0 4px 20px rgba(0, 0, 0, 0.1)",
+              }}
             >
-              Our Services
-            </h2>
-            <p
-              className="text-lg text-gray-600 max-w-2xl mx-auto"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
+              Your Ideas × Our Technology
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto font-light tracking-wide"
+              style={{
+                fontFamily: "system-ui, -apple-system, sans-serif",
+                letterSpacing: "0.02em",
+                lineHeight: "1.6",
+              }}
             >
-              最新のテクノロジーを活用した包括的なソリューションを提供します
-            </p>
+              異なる視点が出会うとき、革新が生まれます
+            </motion.p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {services.map((service, index) => (
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {collaborations.map((collab, index) => (
               <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 30 }}
+                key={collab.title}
+                initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6, delay: index * 0.15 }}
                 viewport={{ once: true }}
-                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-2"
+                className="bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-500 group hover:-translate-y-3 border border-gray-100/50"
+                style={{
+                  boxShadow: `0 10px 40px rgba(0, 0, 0, 0.1), 0 0 20px ${collab.shadowColor}`,
+                }}
               >
-                <div
-                  className={`w-16 h-16 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center text-white mb-6 group-hover:scale-110 transition-transform duration-300`}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.15 + 0.2 }}
+                  viewport={{ once: true }}
+                  className={`w-20 h-20 rounded-2xl bg-gradient-to-r ${collab.color} flex items-center justify-center text-white mb-8 group-hover:scale-110 transition-transform duration-500 shadow-lg`}
                 >
-                  {service.icon}
-                </div>
+                  {collab.icon}
+                </motion.div>
 
-                <h3
-                  className="text-xl font-bold text-gray-900 mb-3"
-                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                <motion.h3
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.15 + 0.3 }}
+                  viewport={{ once: true }}
+                  className="text-2xl sm:text-3xl font-black text-gray-800 mb-4 tracking-tight"
+                  style={{
+                    fontFamily: "system-ui, -apple-system, sans-serif",
+                  }}
                 >
-                  {service.title}
-                </h3>
+                  {collab.title}
+                </motion.h3>
 
-                <p
-                  className="text-gray-600 mb-4 leading-relaxed"
-                  style={{ fontFamily: "Montserrat, sans-serif" }}
+                <motion.p
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.15 + 0.4 }}
+                  viewport={{ once: true }}
+                  className="text-gray-600 mb-6 leading-relaxed text-lg font-light"
+                  style={{
+                    fontFamily: "system-ui, -apple-system, sans-serif",
+                    letterSpacing: "0.01em",
+                    lineHeight: "1.6",
+                  }}
                 >
-                  {service.description}
-                </p>
+                  {collab.description}
+                </motion.p>
 
-                <ul className="space-y-1 mb-4">
-                  {service.features.map((feature) => (
-                    <li
+                <motion.ul
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.15 + 0.5 }}
+                  viewport={{ once: true }}
+                  className="space-y-2"
+                >
+                  {collab.features.map((feature, featureIndex) => (
+                    <motion.li
                       key={feature}
-                      className="text-sm text-gray-500 flex items-center"
-                      style={{ fontFamily: "Montserrat, sans-serif" }}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{
+                        duration: 0.4,
+                        delay: index * 0.15 + 0.6 + featureIndex * 0.1,
+                      }}
+                      viewport={{ once: true }}
+                      className="text-gray-500 flex items-center font-medium"
+                      style={{
+                        fontFamily: "system-ui, -apple-system, sans-serif",
+                      }}
                     >
-                      <div className="w-1.5 h-1.5 bg-green-500 rounded-full mr-2" />
+                      <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-green-500 rounded-full mr-3 shadow-sm" />
                       {feature}
-                    </li>
+                    </motion.li>
                   ))}
-                </ul>
+                </motion.ul>
               </motion.div>
             ))}
           </div>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
             viewport={{ once: true }}
             className="text-center"
           >
             <Link
               href="/service"
-              className="inline-flex items-center bg-green-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors duration-200 group"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
+              className="inline-flex items-center bg-gradient-to-r from-green-500 to-green-600 text-white px-12 py-5 rounded-2xl font-bold text-xl hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-2 group"
+              style={{
+                fontFamily: "system-ui, -apple-system, sans-serif",
+                letterSpacing: "0.02em",
+              }}
             >
-              すべてのサービスを見る
-              <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" />
+              協力プロセスを見る
+              <ArrowRight className="w-6 h-6 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
             </Link>
           </motion.div>
         </motion.div>

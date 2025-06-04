@@ -1,59 +1,86 @@
 "use client";
 import { motion } from "framer-motion";
-import { Target } from "lucide-react";
+import { Users } from "lucide-react";
 import Link from "next/link";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="relative py-20 bg-white">
+    <section
+      id="about"
+      className="relative py-24 bg-gradient-to-br from-[#fafaf7] via-[#f5f5f2] to-[#f0f0ed]"
+    >
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
-          className="max-w-4xl mx-auto text-center"
+          className="max-w-5xl mx-auto text-center"
         >
-          <h2
-            className="text-3xl md:text-4xl font-bold text-gray-900 mb-8"
-            style={{ fontFamily: "Montserrat, sans-serif" }}
-          >
-            About Us
-          </h2>
-
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.1 }}
             viewport={{ once: true, margin: "-50px" }}
-            className="bg-gradient-to-r from-green-50 to-green-100 rounded-2xl p-8 md:p-12"
+            className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 md:p-16 shadow-xl border border-white/20"
           >
-            <div className="flex items-center justify-center w-16 h-16 mx-auto mb-6 rounded-full bg-green-600 text-white">
-              <Target className="w-8 h-8" />
-            </div>
-
-            <h3
-              className="text-2xl md:text-3xl font-bold text-green-600 mb-6"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
+            <motion.div
+              initial={{ opacity: 0, scale: 0 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="flex items-center justify-center w-20 h-20 mx-auto mb-8 rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white shadow-lg"
             >
-              Our Mission
-            </h3>
+              <Users className="w-10 h-10" />
+            </motion.div>
 
-            <p
-              className="text-gray-700 text-lg md:text-xl leading-relaxed mb-8"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="text-4xl sm:text-5xl md:text-6xl font-black text-green-600 mb-8 tracking-tight"
+              style={{
+                fontFamily: "system-ui, -apple-system, sans-serif",
+                textShadow: "0 4px 20px rgba(34, 197, 94, 0.2)",
+              }}
             >
-              最新のテクノロジーを活用して、お客様のビジネスを次のレベルへと導きます。
-              私たちは革新的なソリューションを提供し、お客様の成功をサポートします。
-            </p>
+              Together We Create
+            </motion.h2>
 
-            <Link
-              href="/about"
-              className="inline-flex items-center bg-green-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-green-700 transition-colors duration-200"
-              style={{ fontFamily: "Montserrat, sans-serif" }}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true }}
+              className="text-gray-700 text-xl sm:text-2xl md:text-3xl leading-relaxed mb-12 font-light tracking-wide max-w-4xl mx-auto"
+              style={{
+                fontFamily: "system-ui, -apple-system, sans-serif",
+                letterSpacing: "0.02em",
+                lineHeight: "1.6",
+              }}
             >
-              詳しく見る
-            </Link>
+              あなたのアイデアと私たちのテクノロジーが出会うとき、
+              想像を超える価値が生まれます。 一緒に未来を創造しましょう。
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              viewport={{ once: true }}
+            >
+              <Link
+                href="/about"
+                className="inline-flex items-center bg-gradient-to-r from-green-500 to-green-600 text-white px-10 py-4 rounded-2xl font-bold text-lg hover:from-green-600 hover:to-green-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                style={{
+                  fontFamily: "system-ui, -apple-system, sans-serif",
+                  letterSpacing: "0.02em",
+                }}
+              >
+                パートナーシップについて
+              </Link>
+            </motion.div>
           </motion.div>
         </motion.div>
       </div>
